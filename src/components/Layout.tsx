@@ -83,7 +83,7 @@ const Container = styled.div`
   }
 `;
 const Main = styled.main`
-  min-height: 80vh;
+  min-height: 50vh;
 `;
 const Footer = styled.footer`
   display: flex;

@@ -88,6 +88,7 @@ const Main = styled.main`
 const Footer = styled.footer`
   display: flex;
   align-items: center;
+  padding: 2em 0;
   justify-content: space-between;
 
   .footer-title {

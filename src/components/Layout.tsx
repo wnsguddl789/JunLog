@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { COLOR } from '../constant';
+import Link from 'next/link';
 import { FaGithubSquare, FaInstagramSquare, FaFacebookSquare } from 'react-icons/fa';
 export const AppLayout: React.FunctionComponent<any> = ({ children }) => {
   return (
     <Container>
       <header>
-        <span className="header-title">Jun Log</span>
+        <span className="header-title">
+          <Link href={'/'}>Jun Log</Link>
+        </span>
         <li className="header-list">
-          <ul>Article</ul>
-          <ul>Wiki</ul>
-          <ul>Log</ul>
+          <ul>
+            <Link href={'/article'}>Article</Link>
+          </ul>
+          <ul>
+            <Link href={'/wiki'}>Wiki</Link>
+          </ul>
+          <ul>
+            <Link href={'/log'}>Log</Link>
+          </ul>
         </li>
       </header>
       <Main>{children}</Main>
@@ -63,6 +72,14 @@ const Container = styled.div`
     padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      color: black;
+      text-decoration: none;
+      :hover {
+        color: ${COLOR.defaultColor};
+      }
+    }
 
     .header-title {
       font-size: 1.6em;
